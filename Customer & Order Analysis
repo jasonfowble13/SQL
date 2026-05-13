@@ -45,3 +45,11 @@ ON FebSales.orderID = customers.order_id
 WHERE FebSales.Quantity>2
 AND length(orderid) = 6
 AND orderid <> 'Order ID';
+
+SELECT location
+FROM BIT_DB.FebSales
+WHERE orderdate = '02/18/19 01:35';
+
+SELECT sum(quantity)
+FROM BIT_DB.FebSales
+WHERE orderdate LIKE '02/18/19%'
